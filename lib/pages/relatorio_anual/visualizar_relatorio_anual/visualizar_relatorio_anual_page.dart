@@ -11,8 +11,8 @@ class VisualizarRelatorioAnualPage extends StatefulWidget {
   const VisualizarRelatorioAnualPage({
     required this.data,
     required this.nomeGrupo,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<VisualizarRelatorioAnualPage> createState() =>

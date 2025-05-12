@@ -8,8 +8,8 @@ class GruposMissionariosDropdown extends StatefulWidget {
   const GruposMissionariosDropdown({
     required this.dbProvider,
     required this.onSelected,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<GruposMissionariosDropdown> createState() =>

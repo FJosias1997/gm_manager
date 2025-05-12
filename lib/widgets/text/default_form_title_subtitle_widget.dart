@@ -10,8 +10,8 @@ class DefaultFormTitleSubtitleWidget extends StatelessWidget {
     required this.title,
     this.subtitle,
     this.trailing,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

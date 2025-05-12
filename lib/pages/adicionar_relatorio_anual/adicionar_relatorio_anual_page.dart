@@ -8,7 +8,7 @@ import 'package:gm_manager/widgets/text/default_form_title_subtitle_widget.dart'
 import 'package:gm_manager/widgets/textfield/default_textfield_widget.dart';
 
 class AdicionarRelatorioAnualPage extends StatefulWidget {
-  const AdicionarRelatorioAnualPage({Key? key}) : super(key: key);
+  const AdicionarRelatorioAnualPage({super.key});
 
   @override
   State<AdicionarRelatorioAnualPage> createState() {
@@ -146,7 +146,7 @@ class _AdicionarRelatorioAnualPageState
     debugPrint(result.toString());
 
     if (result > 0) {
-      if (!context.mounted) return;
+      if (!mounted) return;
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -154,7 +154,7 @@ class _AdicionarRelatorioAnualPageState
         ),
       );
     } else {
-      if (!context.mounted) return;
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text('Erro')));

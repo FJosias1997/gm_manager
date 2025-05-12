@@ -6,7 +6,7 @@ import 'package:gm_manager/widgets/header/custom_home_header_widget.dart';
 import 'package:gm_manager/widgets/itens/default_home_item_card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<StatefulWidget> createState() {

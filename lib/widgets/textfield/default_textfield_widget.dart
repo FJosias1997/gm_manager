@@ -6,14 +6,14 @@ class DefaultTextFieldWidget extends StatelessWidget {
   final TextInputType? type;
   final Function()? onTap;
   final bool? enabled;
-  const DefaultTextFieldWidget(
-      {this.controller,
-      this.label,
-      this.type,
-      this.onTap,
-      this.enabled,
-      Key? key})
-      : super(key: key);
+  const DefaultTextFieldWidget({
+    this.controller,
+    this.label,
+    this.type,
+    this.onTap,
+    this.enabled,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

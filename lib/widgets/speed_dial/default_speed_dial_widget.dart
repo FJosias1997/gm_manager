@@ -3,8 +3,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class DefaultSpeedDialWidget extends StatefulWidget {
   final List<SpeedDialChild> widgets;
-  const DefaultSpeedDialWidget({required this.widgets, Key? key})
-      : super(key: key);
+  const DefaultSpeedDialWidget({required this.widgets, super.key});
 
   @override
   State<DefaultSpeedDialWidget> createState() => _DefaultSpeedDialWidgetState();

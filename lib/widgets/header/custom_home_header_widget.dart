@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gm_manager/extensions/context_extension.dart';
-import 'package:gm_manager/widgets/drawer/default_drawer_menu_widget.dart';
 
 class CustomHomeHeaderWidget extends StatefulWidget {
-  const CustomHomeHeaderWidget({Key? key}) : super(key: key);
+  const CustomHomeHeaderWidget({super.key});
 
   @override
   State<CustomHomeHeaderWidget> createState() => _CustomHomeHeaderWidgetState();
@@ -34,13 +33,13 @@ class _CustomHomeHeaderWidgetState extends State<CustomHomeHeaderWidget> {
                   Text(
                     'Bem-vindo',
                     style: context.theme.textTheme.titleMedium?.copyWith(
-                      color: context.theme.colorScheme.background,
+                      color: context.theme.colorScheme.surface,
                     ),
                   ),
                   Text(
                     'Josias Félix',
                     style: context.theme.textTheme.titleLarge?.copyWith(
-                      color: context.theme.colorScheme.background,
+                      color: context.theme.colorScheme.surface,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

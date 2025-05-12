@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class DefaultButtonWidget extends StatelessWidget {
   final String title;
   final Function() onTap;
-  const DefaultButtonWidget(
-      {required this.title, required this.onTap, Key? key})
-      : super(key: key);
+  const DefaultButtonWidget({
+    required this.title,
+    required this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +18,15 @@ class DefaultButtonWidget extends StatelessWidget {
         height: MediaQuery.of(context).size.height * .07,
         color: Colors.blue,
         child: Center(
-            child: Text(
-          title.toUpperCase(),
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: MediaQuery.of(context).size.height * .022,
+          child: Text(
+            title.toUpperCase(),
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: MediaQuery.of(context).size.height * .022,
+            ),
           ),
-        )),
+        ),
       ),
     );
   }

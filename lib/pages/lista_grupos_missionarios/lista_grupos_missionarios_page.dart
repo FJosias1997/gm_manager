@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gm_manager/models/relatorio_anual_model.dart';
 import 'package:gm_manager/database/database_provider.dart';
 import 'package:gm_manager/models/grupo_missionario_model.dart';
-import 'package:gm_manager/pages/relatorio_anual/visualizar_relatorio_anual/visualizar_relatorio_anual_page.dart';
 import 'package:gm_manager/widgets/drawer/default_drawer_menu_widget.dart';
 
 class ListaGruposMissionariosPage extends StatefulWidget {
-  const ListaGruposMissionariosPage({Key? key}) : super(key: key);
+  const ListaGruposMissionariosPage({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -57,7 +55,7 @@ class ListaGruposMissionariosPageState
 
   @override
   Widget build(BuildContext context) => PopScope(
-    onPopInvoked: (value) async {
+    onPopInvokedWithResult: (value, __) async {
       debugPrint('Back Button Pressed');
     },
     child: Scaffold(

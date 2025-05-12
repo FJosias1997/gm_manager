@@ -9,7 +9,7 @@ import 'package:gm_manager/widgets/textfield/default_textfield_widget.dart';
 import 'package:gm_manager/extensions/datetime_extension.dart';
 
 class CadastrarGmPage extends StatefulWidget {
-  const CadastrarGmPage({Key? key}) : super(key: key);
+  const CadastrarGmPage({super.key});
 
   @override
   State<CadastrarGmPage> createState() {
@@ -105,7 +105,7 @@ class _CadastrarGmPageState extends State<CadastrarGmPage> {
     debugPrint(result.toString());
 
     if (result > 0) {
-      if (!context.mounted) return;
+      if (!mounted) return;
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -113,7 +113,7 @@ class _CadastrarGmPageState extends State<CadastrarGmPage> {
         ),
       );
     } else {
-      if (!context.mounted) return;
+      if (!mounted) return;
       context.showSnackBar('Erro', context);
     }
   }

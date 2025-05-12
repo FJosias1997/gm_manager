@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gm_manager/extensions/context_extension.dart';
-import 'package:gm_manager/models/grupo_missionario_model.dart';
 import 'package:gm_manager/models/relatorio_anual_model.dart';
 import 'package:gm_manager/database/database_provider.dart';
 import 'package:gm_manager/pages/relatorio_anual/visualizar_relatorio_anual/visualizar_relatorio_anual_page.dart';
@@ -10,7 +9,7 @@ import 'package:gm_manager/widgets/dropdowns/grupos_missionarios_dropdown.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 class ListaRelatorioAnualPage extends StatefulWidget {
-  const ListaRelatorioAnualPage({Key? key}) : super(key: key);
+  const ListaRelatorioAnualPage({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -105,7 +104,7 @@ class ListaRelatorioAnualPageState extends State<ListaRelatorioAnualPage> {
                           backgroundColor: Colors.blue,
                           child: Icon(
                             PhosphorIcons.file(),
-                            color: context.theme.colorScheme.background,
+                            color: context.theme.colorScheme.surface,
                           ),
                         ),
                         title: Text('Relatorio $index'),

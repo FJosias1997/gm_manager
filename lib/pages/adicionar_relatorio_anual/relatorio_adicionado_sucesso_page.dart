@@ -6,7 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:share_plus/share_plus.dart';
 
 class RelatorioAdicionadoSucessoPage extends StatefulWidget {
-  const RelatorioAdicionadoSucessoPage({Key? key}) : super(key: key);
+  const RelatorioAdicionadoSucessoPage({super.key});
 
   @override
   State<RelatorioAdicionadoSucessoPage> createState() =>
@@ -41,7 +41,12 @@ class _RelatorioAdicionadoSucessoPageState
               title: 'Exportar Como PDF',
               onTap: () {
                 shareRelatorioAnual().then((value) async {
-                  await Share.shareXFiles([XFile(value.path)]);
+                  await SharePlus.instance.share(
+                    ShareParams(
+                      text: 'Great picture',
+                      files: [XFile(value.path)],
+                    ),
+                  );
                 });
               },
             ),
